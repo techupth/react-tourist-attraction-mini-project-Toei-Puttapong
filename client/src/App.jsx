@@ -4,8 +4,7 @@ import TouristRender from "./component/TouristRender";
 function App() {
   return (
     <div className="App">
-      {" "}
-      <TouristRender />{" "}
+      <TouristRender />
     </div>
   );
 }

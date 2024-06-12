@@ -6,13 +6,165 @@
   font-family: "Kanit", sans-serif;
 }
 
+:root {
+  --blue-clor: #30c5f3;
+}
+
+/* Button ทั้งหมด */
 button:hover {
   cursor: pointer;
 }
 
-.link-icon > span {
-  color: #71bbe6;
-  font-size: 3rem;
-  border: 2px solid #71bbe6;
-  border-radius: 30px;
+/*======TouristRender component Style======*/
+.tourist-render {
+  /* header style */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      color: var(--blue-clor);
+      font-size: 4rem;
+      font-weight: 400;
+    }
+    .tourist-render-search {
+      display: flex;
+      flex-direction: column;
+      width: 1200px;
+      font-size: 1.5rem;
+      position: relative;
+
+      input {
+        width: 100%;
+        border-bottom: 1px solid #8a8a8a;
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        color: #8a8a8a;
+        background: none;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  /* render card style */
+  .tourist-render-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/*======TouristCard component Style======*/
+.tourist-card-container {
+  width: 1200px;
+  display: flex;
+  margin: 1rem;
+  gap: 2rem;
+
+  .tourist-card-left {
+    flex: 1;
+    text-align: center;
+
+    .tourist-card-left-img > img {
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  .tourist-card-right {
+    flex: 2;
+
+    .tourist-card-right-title {
+      font-size: 1.5rem;
+    }
+
+    .tourist-card-right-description {
+      color: #8a8a8a;
+    }
+
+    a {
+      color: var(--blue-clor);
+      background: none;
+      text-decoration-line: underline;
+    }
+
+    .tourist-card-right-tags {
+      display: flex;
+      gap: 0.5rem;
+      color: #8a8a8a;
+
+      button {
+        background: none;
+        text-decoration-line: underline;
+        color: #8a8a8a;
+        font-size: 1rem;
+      }
+    }
+
+    .tourist-card-right-img {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+
+      img {
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+
+    .tourist-card-copyLink {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      right: -580px;
+      top: -40px;
+
+      button {
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--blue-clor);
+        border-radius: 30px;
+        background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          margin: 0;
+          padding: 0;
+          text-align: center;
+          font-size: 2rem;
+          color: var(--blue-clor);
+        }
+      }
+      button:hover {
+        background-color: var(--blue-clor);
+
+        i {
+          color: white;
+        }
+      }
+
+      span {
+        height: 1.5rem;
+        border-radius: 5px;
+        position: relative;
+        top: -30px;
+        right: 45px;
+        color: white;
+        background-color: var(--blue-clor);
+      }
+    }
+  }
 }
